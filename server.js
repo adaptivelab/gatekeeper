@@ -22,8 +22,8 @@ var config = loadConfig();
 
 function authenticate(code, cb) {
   var data = qs.stringify({
-    client_id: config.oauth_client_id,
-    client_secret: config.oauth_client_secret,
+    client_id: process.env.oauth_client_id,
+    client_secret: process.env.oauth_client_secret,
     code: code
   });
 
